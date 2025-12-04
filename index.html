@@ -7,7 +7,7 @@
   <meta name="keywords" content="сайт в приложение, android приложение, telegram бот, tilda в приложение, wix в приложение">
   <meta property="og:title" content="AppMaker Bot — сайт → Android-приложение за 3 минуты">
   <meta property="og:description" content="Создайте мобильное приложение из любого сайта. Демо-APK за 2 минуты.">
-  <meta property="og:image" content="https://placehold.co/1200x630/2563eb/white?text=AppMaker+Bot+%E2%80%94+%D0%A1%D0%B0%D0%B9%D1%82+%E2%86%92+Android">
+  <meta property="og:image" content="https://placehold.co/1200x630/2563eb/white?text=AppMaker+Bot">
   <title>AppMaker Bot — сайт в Android-приложение за 3 минуты</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -18,8 +18,33 @@
       background: #f8fafc;
     }
     .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-    header { text-align: center; padding: 40px 0 20px; }
-    h1 { font-size: 2.4rem; margin: 16px 0; color: #0f172a; }
+    header {
+      text-align: center;
+      padding: 40px 0 30px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .logo img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #e2e8f0;
+    }
+    .logo span {
+      background: linear-gradient(90deg, #2563eb, #7c3aed);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    h1 { font-size: 2.4rem; margin: 12px 0; color: #0f172a; }
     .subtitle { font-size: 1.2rem; color: #64748b; max-width: 600px; margin: 0 auto; }
     .btn {
       display: inline-block;
@@ -43,66 +68,105 @@
     }
     .feature { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
     .feature h3 { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-    .feature h3::before {
-      content: "✅";
-      font-size: 1.4rem;
-    }
+    .feature h3::before { content: "✅"; font-size: 1.4rem; }
     .price { text-align: center; background: white; padding: 24px; border-radius: 12px; margin: 30px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
     .price strong { font-size: 1.4rem; color: #0f172a; }
-    .why { background: #e0f2fe; padding: 24px; border-radius: 12px; margin: 30px 0; }
-    .why h2 { text-align: center; margin-bottom: 16px; }
-    .logo {
-      font-size: 2.2rem;
-      font-weight: 800;
-      background: linear-gradient(90deg, #2563eb, #7c3aed);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+
+    /* Новое описание */
+    .description {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      margin: 30px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      line-height: 1.7;
+    }
+    .description h2 {
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+      color: #0f172a;
+      text-align: center;
+    }
+    .description p {
+      margin-bottom: 16px;
+    }
+    .description ul {
+      padding-left: 24px;
+      margin: 16px 0;
+    }
+    .description li {
+      margin-bottom: 10px;
+    }
+    .divider {
+      border: 0;
+      border-top: 1px dashed #cbd5e1;
+      margin: 24px 0;
+    }
+    .note {
+      background: #fef9c3;
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: 500;
+      color: #78350f;
     }
     @media (max-width: 600px) {
       h1 { font-size: 2rem; }
       .btn { display: block; text-align: center; }
+      .logo { flex-direction: column; }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="logo">📱 AppMaker Bot</div>
-      <h1>Сайт → Android-приложение за 3 минуты</h1>
-      <p class="subtitle">Без программиста. Даже если у вас сайт на Tilda, Wix или WordPress.</p>
-      <a href="https://t.me/appmaker_bot" target="_blank" class="btn">👉 Начать в Telegram</a>
+      <div class="logo">
+        <img src="bot.png" alt="AppMaker Bot">
+        <span>AppMaker Bot</span>
+      </div>
+      <h1>Сайт → Android-приложение</h1>
+      <p class="subtitle">Сервис для владельцев бизнеса, у которых уже есть сайт, но нет мобильного приложения.</p>
+      <a href="https://t.me/SiteWrapper_bot" target="_blank" class="btn">👉 Перейти в Bot</a>
     </header>
 
-    <div class="features">
-      <div class="feature">
-        <h3>Готовое демо-приложение за 2 минуты</h3>
-        <p>Отправьте ссылку → подтвердите владение сайта → получите APK-файл для установки.</p>
+    <div class="description">
+      <p>Бот создаёт корректное Android-приложение на основе WebView — то есть ваш сайт открывается внутри приложения, точно так же, как в браузере.</p>
+      
+      <div class="note">
+        📌 Важно: сайт должен быть адаптирован под мобильные устройства — тогда приложение будет выглядеть и работать идеально.
       </div>
-      <div class="feature">
-        <h3>Чистая версия после оплаты</h3>
-        <p>Полный APK без водяных знаков и ограничений. Готов к установке на любые устройства.</p>
-      </div>
-      <div class="feature">
-        <h3>Push-уведомления, аналитика, QR-коды</h3>
-        <p>Добавим по запросу — никаких доплат за базовые функции.</p>
-      </div>
+
+      <p class="note" style="background:#dcfce7;color:#166534;margin-top:16px;">
+        🆓 Попробуйте бесплатно!<br>
+        Получите демо-версию приложения прямо сейчас — установите, проверьте, как оно выглядит и работает. Никаких обязательств.
+      </p>
+
+      <hr class="divider">
+
+      <h2>🔑 Почему это выгодно — даже если «это просто сайт в приложении»:</h2>
+      <ul>
+        <li><strong>✅ Клиенты не теряются</strong><br>
+        В отличие от браузера — ваше приложение всегда на главном экране телефона. Никаких закладок, поиска в Google, «а как называлось то кафе?».</li>
+        
+        <li><strong>✅ Быстрый доступ = больше заказов</strong><br>
+        Клиенты заходят на сайт в 2 клика — а не ищут ссылку в SMS или мессенджере. По статистике, это +15–30% к повторным заказам.</li>
+        
+        <li><strong>✅ Профессиональный имидж</strong><br>
+        «У них есть приложение» — уже повод доверять. Особенно у конкурентов его нет.</li>
+        
+        <li><strong>✅ Полный контроль</strong><br>
+        Приложение обновляется автоматически — меняете сайт → меняется и приложение. Никаких обновлений в Google Play.</li>
+      </ul>
+
+      <hr class="divider">
+
+      <p><strong>🔒 Все приложения создаются только после подтверждения прав на сайт</strong> (через мета-тег, файл или DNS).</p>
+      <p><strong>📱 Работает с Tilda, Wix, WordPress, самописными сайтами</strong> — главное: HTTPS + мобильная версия.</p>
     </div>
 
-    <div class="price">
-      <strong>От 5 000 ₽</strong><br>
-      <small>Сборка — 2 минуты • Оплата после проверки демо</small>
-    </div>
-
-    <div class="why">
-      <h2>🔍 Почему это работает</h2>
-      <p><strong>Для кого:</strong> владельцы кафе, магазинов, СТО, салонов — те, кто ценит скорость, а не технические детали.<br>
-      <strong>Доверие:</strong> подтверждение владения сайта — никакого мошенничества.<br>
-      <strong>Установка:</strong> 1 клик — без Google Play, без одобрения, без сложных инструкций.</p>
-    </div>
+    
 
     <div style="text-align: center; margin-top: 30px;">
-      <a href="https://t.me/appmaker_bot" target="_blank" class="btn">🚀 Получить демо-приложение</a>
+      <a href="https://t.me/SiteWrapper_bot" target="_blank" class="btn">🚀 Получить демо-приложение</a>
     </div>
   </div>
 </body>
